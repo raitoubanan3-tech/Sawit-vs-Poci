@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://8dv3pdtqi118"]
+
+[ext_resource type="Script" uid="uid://b6vm52lgjg1at" path="res://asset/scripts/koin_ikon.gd" id="1_tejsp"]
+[ext_resource type="Texture2D" uid="uid://drd1w0il2e0gh" path="res://asset/textures/koin_sprite.png" id="2_tgi0a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_43gtn"]
+font_size = 8
+font_color = Color(1, 0.777418, 0.5827623, 1)
+outline_size = 3
+outline_color = Color(0.27344894, 0.17623067, 2.4065375e-08, 1)
+
+[node name="KoinIkon" type="Sprite2D" unique_id=1227137731 groups=["label_koin"]]
+scale = Vector2(1.9, 1.9)
+script = ExtResource("1_tejsp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=395853628]
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 50.0
+offset_bottom = 15.0
+color = Color(0.5160359, 0.35526907, 0.21425462, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2101777572]
+position = Vector2(3, 4.000001)
+scale = Vector2(0.135, 0.135)
+texture = ExtResource("2_tgi0a")
+region_enabled = true
+region_rect = Rect2(39, 38, 143, 143)
+
+[node name="Label" type="Label" parent="." unique_id=105724540]
+offset_left = 15.0
+offset_top = -2.0
+offset_right = 47.0
+offset_bottom = 11.0
+text = "koin"
+label_settings = SubResource("LabelSettings_43gtn")

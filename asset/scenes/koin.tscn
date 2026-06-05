@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://bedx8c1p0xbxx"]
+
+[ext_resource type="Script" uid="uid://b3rb42s5aikm6" path="res://asset/scripts/koin.gd" id="1_72q3v"]
+[ext_resource type="Texture2D" uid="uid://drd1w0il2e0gh" path="res://asset/textures/koin_sprite.png" id="2_8uv4d"]
+
+[sub_resource type="Animation" id="Animation_a2fwt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D3:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1074649, 1.1074649)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Sprite2D3:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Sprite2D4:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.6039216)]
+}
+
+[sub_resource type="Animation" id="Animation_exmw3"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.604997, 0.55491626),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D3:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1074649, 1.1074649), Vector2(1.397, 1.397), Vector2(1.1074649, 1.1074649)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Sprite2D3:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 0.18301077),
+"update": 0,
+"values": [Color(1, 1, 1, 0.6039216), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6039216)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Sprite2D4:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 0.18301077),
+"update": 0,
+"values": [Color(1, 1, 1, 0.21176471), Color(1, 1, 1, 0.73333335), Color(1, 1, 1, 0.2509804)]
+}
+
+[sub_resource type="Animation" id="Animation_awaui"]
+resource_name = "spawn"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.604997, 0.55491626),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D3:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1074649, 1.1074649), Vector2(1.397, 1.397), Vector2(1.1074649, 1.1074649)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Sprite2D3:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 0.18301077),
+"update": 0,
+"values": [Color(1, 1, 1, 0.6039216), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6039216)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Sprite2D4:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 0.18301077),
+"update": 0,
+"values": [Color(1, 1, 1, 0.21176471), Color(1, 1, 1, 0.73333335), Color(1, 1, 1, 0.2509804)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_awaui"]
+_data = {
+&"RESET": SubResource("Animation_a2fwt"),
+&"idle": SubResource("Animation_exmw3"),
+&"spawn": SubResource("Animation_awaui")
+}
+
+[node name="Area2D" type="Area2D" unique_id=1722034702]
+script = ExtResource("1_72q3v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1604938633]
+scale = Vector2(0.295, 0.295)
+region_enabled = true
+region_rect = Rect2(39, 38, 143, 143)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D" unique_id=1301035149]
+self_modulate = Color(1, 1, 1, 0.6039216)
+position = Vector2(-4.7683716e-07, 4.7683716e-07)
+scale = Vector2(1.762, 1.762)
+texture = ExtResource("2_8uv4d")
+offset = Vector2(0.278, -5.605)
+region_enabled = true
+region_rect = Rect2(342.51508, 230.46591, 318.35217, 265.2935)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D" unique_id=1948300852]
+scale = Vector2(1.1074649, 1.1074649)
+texture = ExtResource("2_8uv4d")
+offset = Vector2(-0.165, 4.22)
+region_enabled = true
+region_rect = Rect2(205, 20, 219, 216)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=68256772]
+texture = ExtResource("2_8uv4d")
+region_enabled = true
+region_rect = Rect2(39, 38, 143, 143)
+
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=2030748878]
+libraries/ = SubResource("AnimationLibrary_awaui")
+autoplay = &"idle"
+
+[node name="Button" type="Button" parent="." unique_id=1797333022]
+offset_left = -22.0
+offset_top = -23.0
+offset_right = 22.0
+offset_bottom = 22.0
+flat = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1475170945]
+wait_time = 4.0
+autostart = true
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

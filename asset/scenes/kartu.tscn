@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dr7al164t6vfi"]
+
+[ext_resource type="Script" uid="uid://cqql0bo3ipi5v" path="res://asset/scripts/kartu.gd" id="1_e66nr"]
+[ext_resource type="Texture2D" uid="uid://1bs070ns0wbw" path="res://asset/textures/cards/kartu0.tres" id="1_p7jkb"]
+[ext_resource type="Texture2D" uid="uid://drd1w0il2e0gh" path="res://asset/textures/koin_sprite.png" id="3_7rct4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eqwd4"]
+font_size = 14
+
+[node name="KartuTemplate" type="Area2D" unique_id=428854528]
+script = ExtResource("1_e66nr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1223585723]
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D" unique_id=114977933]
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("1_p7jkb")
+
+[node name="Harga" type="Label" parent="Sprite2D" unique_id=1010943296]
+offset_left = -27.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 24.0
+text = "0000"
+label_settings = SubResource("LabelSettings_eqwd4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=138690543]
+position = Vector2(19, 11)
+scale = Vector2(0.114, 0.114)
+texture = ExtResource("3_7rct4")
+region_enabled = true
+region_rect = Rect2(39, 38, 143, 143)
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite2D" unique_id=435375823]
+self_modulate = Color(0.06315863, 0.24098215, 0.41507748, 1)
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 20.0
+value = 100.0
+show_percentage = false
+
+[node name="Button" type="Button" parent="Sprite2D" unique_id=107897226]
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 20.0
+flat = true
+
+[connection signal="button_up" from="Sprite2D/Button" to="." method="_on_button_button_up"]

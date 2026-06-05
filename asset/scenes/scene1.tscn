@@ -1,0 +1,124 @@
+[gd_scene format=4 uid="uid://k6mtqxgwk4kn"]
+
+[ext_resource type="Texture2D" uid="uid://cgtfuwny6lrmh" path="res://asset/textures/halaman_malam.png" id="1_2rxub"]
+[ext_resource type="Script" uid="uid://bft8ij3c50a7f" path="res://asset/scenes/scene_1.gd" id="1_ehdvm"]
+[ext_resource type="Texture2D" uid="uid://c7r7tq23hdnxs" path="res://asset/textures/icon.svg" id="2_i1wsk"]
+[ext_resource type="PackedScene" uid="uid://ughqg051ecis" path="res://asset/scenes/marigold.tscn" id="3_daqx8"]
+[ext_resource type="PackedScene" uid="uid://bedx8c1p0xbxx" path="res://asset/scenes/koin.tscn" id="4_67nkm"]
+[ext_resource type="PackedScene" uid="uid://8dv3pdtqi118" path="res://asset/scenes/koin_ikonl.tscn" id="5_i1wsk"]
+[ext_resource type="PackedScene" uid="uid://dr7al164t6vfi" path="res://asset/scenes/kartu.tscn" id="6_daqx8"]
+[ext_resource type="PackedScene" uid="uid://dp8t5lwdrrqvx" path="res://asset/scenes/poci.tscn" id="7_67nkm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2sqd"]
+texture = ExtResource("2_i1wsk")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ho7oe"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_m2sqd")
+
+[node name="Node2D" type="Node2D" unique_id=1954592448]
+y_sort_enabled = true
+script = ExtResource("1_ehdvm")
+
+[node name="background" type="Sprite2D" parent="." unique_id=2052849100]
+z_index = -10
+position = Vector2(720, 313)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_2rxub")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="background" unique_id=1294472152]
+self_modulate = Color(1, 1, 1, 0.21176471)
+position = Vector2(-658.9928, -263.3094)
+scale = Vector2(0.923, 1.065)
+tile_map_data = PackedByteArray("AAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAHAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAADAAMAAAAAAAAAAAACAAQAAAAAAAAAAAABAAMAAAAAAAAAAAABAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ho7oe")
+
+[node name="Area2D" parent="." unique_id=1722034702 instance=ExtResource("4_67nkm")]
+position = Vector2(227, 205)
+
+[node name="Control" parent="." unique_id=818819437 instance=ExtResource("5_i1wsk")]
+position = Vector2(243, 64)
+
+[node name="KartuTemplate" parent="Control" unique_id=428854528 instance=ExtResource("6_daqx8")]
+position = Vector2(-87.36842, 1.9073486e-06)
+
+[node name="CharacterBody2D2" parent="." unique_id=1974861528 instance=ExtResource("7_67nkm")]
+position = Vector2(586, 300)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1026395200]
+position = Vector2(575, 332)
+zoom = Vector2(0.81, 0.81)
+
+[node name="TimerSpawnHantu" type="Timer" parent="." unique_id=246153193]
+wait_time = 3.0
+autostart = true
+
+[node name="CharacterBody2D" parent="." unique_id=623026990 instance=ExtResource("3_daqx8")]
+position = Vector2(471, 303)
+
+[connection signal="timeout" from="TimerSpawnHantu" to="." method="_on_timer_spawn_hantu_timeout"]

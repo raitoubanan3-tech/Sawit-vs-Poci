@@ -1,0 +1,14 @@
+extends Node #global
+
+var koin = 0
+var kartu = 0
+var ubin_yang_terisi : Array[Vector2i] = [] 
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

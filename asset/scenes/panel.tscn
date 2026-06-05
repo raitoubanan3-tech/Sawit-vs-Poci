@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://jnyg114bar4f"]
+
+[ext_resource type="PackedScene" uid="uid://dr7al164t6vfi" path="res://asset/scenes/kartu.tscn" id="1_tpm52"]
+[ext_resource type="Texture2D" uid="uid://c7r7tq23hdnxs" path="res://asset/textures/icon.svg" id="2_n7rmp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6oj4"]
+bg_color = Color(0.80309606, 0.5271252, 0.3237704, 1)
+
+[node name="Panel" type="Panel" unique_id=579128859]
+offset_right = 130.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k6oj4")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=547326270]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 90.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=341525840]
+layout_mode = 2
+columns = 2
+
+[node name="KartuTemplate" parent="MarginContainer/GridContainer" unique_id=428854528 instance=ExtResource("1_tpm52")]
+
+[node name="KartuTemplate2" parent="MarginContainer/GridContainer" unique_id=1424346871 instance=ExtResource("1_tpm52")]
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/GridContainer" unique_id=182966442]
+scale = Vector2(0.166, 0.166)
+texture = ExtResource("2_n7rmp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/GridContainer" unique_id=2108499965]
+scale = Vector2(0.166, 0.166)
+texture = ExtResource("2_n7rmp")

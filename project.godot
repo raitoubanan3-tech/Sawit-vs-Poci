@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PVZ Remake"
+run/main_scene="uid://k6mtqxgwk4kn"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="uid://dqqr7sb2duks5"
+
+[autoload]
+
+GLOBAL="*uid://jdjm6vcuufvi"
+DATA_TANAMAN="*uid://vblfn6bcfu0w"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+tanaman=""
+label_koin=""
+musuh=""
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
