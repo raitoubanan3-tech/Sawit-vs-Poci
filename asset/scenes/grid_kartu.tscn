@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b1rwkhunfv2mk"]
+
+[ext_resource type="Texture2D" uid="uid://ca8cyuyv064xu" path="res://asset/textures/box.png" id="1_4lm2e"]
+[ext_resource type="Script" uid="uid://dyuma0fapujbt" path="res://asset/scripts/grid_kartu.gd" id="1_yjxsq"]
+[ext_resource type="PackedScene" uid="uid://dr7al164t6vfi" path="res://asset/scenes/kartu.tscn" id="3_h1oaq"]
+
+[node name="Control" type="Control" unique_id=551743227]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+script = ExtResource("1_yjxsq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2045576987]
+self_modulate = Color(1.2071352, 0.5978941, 0.3367909, 1)
+layout_mode = 0
+offset_right = 332.0
+offset_bottom = 197.0
+texture = ExtResource("1_4lm2e")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect" unique_id=292203356]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = -13.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect/ScrollContainer" unique_id=373830196]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 65
+theme_override_constants/v_separation = 41
+columns = 3
+
+[node name="KartuTemplate" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=866019584 instance=ExtResource("3_h1oaq")]
+layout_mode = 2
+
+[node name="KartuTemplate2" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=808548402 instance=ExtResource("3_h1oaq")]
+layout_mode = 2
+
+[node name="KartuTemplate3" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=536141840 instance=ExtResource("3_h1oaq")]
+layout_mode = 2
+
+[node name="KartuTemplate4" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=292890400 instance=ExtResource("3_h1oaq")]
+layout_mode = 2

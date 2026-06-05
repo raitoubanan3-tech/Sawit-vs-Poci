@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://k6mtqxgwk4kn"]
 
 [ext_resource type="Texture2D" uid="uid://cgtfuwny6lrmh" path="res://asset/textures/halaman_malam.png" id="1_2rxub"]
-[ext_resource type="Script" uid="uid://bft8ij3c50a7f" path="res://asset/scenes/scene_1.gd" id="1_ehdvm"]
+[ext_resource type="Script" uid="uid://bft8ij3c50a7f" path="res://asset/scripts/scene_1.gd" id="1_ehdvm"]
 [ext_resource type="Texture2D" uid="uid://c7r7tq23hdnxs" path="res://asset/textures/icon.svg" id="2_i1wsk"]
 [ext_resource type="PackedScene" uid="uid://ughqg051ecis" path="res://asset/scenes/marigold.tscn" id="3_daqx8"]
 [ext_resource type="PackedScene" uid="uid://bedx8c1p0xbxx" path="res://asset/scenes/koin.tscn" id="4_67nkm"]
 [ext_resource type="PackedScene" uid="uid://8dv3pdtqi118" path="res://asset/scenes/koin_ikonl.tscn" id="5_i1wsk"]
 [ext_resource type="PackedScene" uid="uid://dr7al164t6vfi" path="res://asset/scenes/kartu.tscn" id="6_daqx8"]
 [ext_resource type="PackedScene" uid="uid://dp8t5lwdrrqvx" path="res://asset/scenes/poci.tscn" id="7_67nkm"]
+[ext_resource type="PackedScene" uid="uid://b1rwkhunfv2mk" path="res://asset/scenes/grid_kartu.tscn" id="9_w5gbd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2sqd"]
 texture = ExtResource("2_i1wsk")
@@ -105,7 +106,10 @@ position = Vector2(227, 205)
 position = Vector2(243, 64)
 
 [node name="KartuTemplate" parent="Control" unique_id=428854528 instance=ExtResource("6_daqx8")]
-position = Vector2(-87.36842, 1.9073486e-06)
+offset_left = -152.63159
+offset_top = 4.736844
+offset_right = -93.63159
+offset_bottom = 42.736843
 
 [node name="CharacterBody2D2" parent="." unique_id=1974861528 instance=ExtResource("7_67nkm")]
 position = Vector2(586, 300)
@@ -120,5 +124,13 @@ autostart = true
 
 [node name="CharacterBody2D" parent="." unique_id=623026990 instance=ExtResource("3_daqx8")]
 position = Vector2(471, 303)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1281069478]
+
+[node name="Control2" parent="." unique_id=1088688420 instance=ExtResource("9_w5gbd")]
+offset_left = 312.0
+offset_top = 167.0
+offset_right = 312.0
+offset_bottom = 167.0
 
 [connection signal="timeout" from="TimerSpawnHantu" to="." method="_on_timer_spawn_hantu_timeout"]
