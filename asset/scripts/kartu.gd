@@ -1,4 +1,4 @@
-extends Button
+extends Control
 var id_kartu = 1
 
 # Called when the node enters the scene tree for the first time.
@@ -16,9 +16,9 @@ func data_kartu():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if GLOBAL.kartu == id_kartu:
-		$Sprite2D.scale = Vector2(1.3, 1.3)
+		scale = Vector2(1.2, 1.2)
 	else:
-		$Sprite2D.scale = Vector2(1.2, 1.2)
+		scale = Vector2(1.0, 1.0)
 
 
 func _on_button_up() -> void:
@@ -30,6 +30,14 @@ func _on_button_up() -> void:
 
 
 func _on_button_down() -> void:
+	if GLOBAL.kartu != id_kartu:
+		GLOBAL.kartu = id_kartu
+	else:
+		GLOBAL.kartu = 0
+		print(GLOBAL.kartu)
+
+
+func _on_button_button_down() -> void:
 	if GLOBAL.kartu != id_kartu:
 		GLOBAL.kartu = id_kartu
 	else:

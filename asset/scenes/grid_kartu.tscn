@@ -13,14 +13,14 @@ offset_right = -1152.0
 offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
+mouse_filter = 2
 script = ExtResource("1_yjxsq")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2045576987]
 self_modulate = Color(1.2071352, 0.5978941, 0.3367909, 1)
 layout_mode = 0
-offset_right = 332.0
-offset_bottom = 197.0
+offset_right = 568.0
+offset_bottom = 294.0
 texture = ExtResource("1_4lm2e")
 patch_margin_left = 1
 patch_margin_top = 1
@@ -33,10 +33,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = 9.0
-offset_right = -13.0
-offset_bottom = -11.0
+offset_left = 35.0
+offset_top = 28.0
+offset_right = 7.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 draw_focus_border = true
@@ -45,9 +45,9 @@ draw_focus_border = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/h_separation = 65
-theme_override_constants/v_separation = 41
-columns = 3
+theme_override_constants/h_separation = 107
+theme_override_constants/v_separation = 71
+columns = 5
 
 [node name="KartuTemplate" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=866019584 instance=ExtResource("3_h1oaq")]
 layout_mode = 2
@@ -59,4 +59,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="KartuTemplate4" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=292890400 instance=ExtResource("3_h1oaq")]
+layout_mode = 2
+
+[node name="KartuTemplate5" parent="NinePatchRect/ScrollContainer/GridContainer" unique_id=1041493589 instance=ExtResource("3_h1oaq")]
 layout_mode = 2

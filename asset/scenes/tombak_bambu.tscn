@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://gt6iw0ayspv3"]
+
+[ext_resource type="Script" uid="uid://1be2olf2dlx1" path="res://asset/scripts/tombak_bambu.gd" id="1_q4yrh"]
+[ext_resource type="Texture2D" uid="uid://be67ba1trua1u" path="res://asset/textures/bambu_sprite.png" id="2_8yumn"]
+
+[node name="Area2D" type="Area2D" unique_id=1722034702]
+script = ExtResource("1_q4yrh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1604938633]
+rotation = 0.3697933
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("2_8yumn")
+region_enabled = true
+region_rect = Rect2(189, 11, 305, 130)
+
+[node name="Button" type="Button" parent="." unique_id=1797333022]
+offset_left = -22.0
+offset_top = -23.0
+offset_right = 22.0
+offset_bottom = 22.0
+flat = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1475170945]
+wait_time = 4.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://ughqg051ecis"]
+[gd_scene format=3 uid="uid://xcv4e13d72tk"]
 
-[ext_resource type="Texture2D" uid="uid://cceyutfmeuomd" path="res://asset/textures/marigold.png" id="1_gatux"]
-[ext_resource type="Script" uid="uid://dj24j7x74w52t" path="res://asset/scripts/marigold.gd" id="1_u24fj"]
+[ext_resource type="Script" uid="uid://dj24j7x74w52t" path="res://asset/scripts/marigold.gd" id="1_uediy"]
+[ext_resource type="Texture2D" uid="uid://cceyutfmeuomd" path="res://asset/textures/marigold.png" id="2_xcd2g"]
+[ext_resource type="Texture2D" uid="uid://bpd8keua63k2w" path="res://asset/textures/kelapa.png" id="3_xcd2g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u24fj"]
 radius = 27.0
@@ -45,18 +46,19 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=623026990 groups=["tanaman"]]
-script = ExtResource("1_u24fj")
+script = ExtResource("1_uediy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1170723330]
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(-2.9999998, -34)
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("1_gatux")
+texture = ExtResource("2_xcd2g")
 offset = Vector2(14.999996, -49.99996)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=647050372]
-texture = ExtResource("1_gatux")
-offset = Vector2(14.999996, -49.99996)
+position = Vector2(20, 22.857143)
+texture = ExtResource("3_xcd2g")
+offset = Vector2(-13.57143, -84.285675)
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1836692843]
 position = Vector2(0, -43)

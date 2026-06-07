@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://ughqg051ecis"]
+
+[ext_resource type="Script" uid="uid://dj24j7x74w52t" path="res://asset/scripts/marigold.gd" id="1_gmk1c"]
+[ext_resource type="Texture2D" uid="uid://cceyutfmeuomd" path="res://asset/textures/marigold.png" id="2_pbp2e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u24fj"]
+radius = 27.0
+height = 82.0
+
+[sub_resource type="Animation" id="Animation_u24fj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ad6t5"]
+resource_name = "diam"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.9, 1), Vector2(1, 0.9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ib177"]
+_data = {
+&"RESET": SubResource("Animation_u24fj"),
+&"diam": SubResource("Animation_ad6t5")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=623026990 groups=["tanaman"]]
+script = ExtResource("1_gmk1c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1170723330]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-2.9999998, -34)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_pbp2e")
+offset = Vector2(14.999996, -49.99996)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=647050372]
+texture = ExtResource("2_pbp2e")
+offset = Vector2(14.999996, -49.99996)
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1836692843]
+position = Vector2(0, -43)
+shape = SubResource("CapsuleShape2D_u24fj")
+
+[node name="HealthPoint" type="ProgressBar" parent="." unique_id=378861567]
+offset_left = -29.0
+offset_top = -107.0
+offset_right = 28.0
+offset_bottom = -87.0
+theme_override_font_sizes/font_size = 10
+min_value = 100.0
+value = 100.0
+
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=855935060]
+libraries/ = SubResource("AnimationLibrary_ib177")
+autoplay = &"diam"
+
+[node name="Timer" type="Timer" parent="." unique_id=1105639819]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

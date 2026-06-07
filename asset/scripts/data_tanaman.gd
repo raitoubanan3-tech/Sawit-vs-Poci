@@ -7,7 +7,7 @@ var data_tanaman = {
 		"darah" : 100,
 		"harga_kartu" : "20",
 		"cooldown_kartu" : "12",
-		"scene" : preload("res://asset/scenes/marigold.tscn"),
+		"scene" : preload("res://asset/scenes/tanaman/marigold.tscn"),
 		"gambar_kartu" : "res://asset/textures/cards/kartu1.tres"
 	},
 	2 : {
@@ -15,6 +15,7 @@ var data_tanaman = {
 		"darah" : "100",
 		"harga_kartu" : "40",
 		"cooldown_kartu" : "12",
+		"scene" : preload("res://asset/scenes/tanaman/bambu.tscn"),
 		"gambar_kartu" : "res://asset/textures/cards/kartu2.tres"
 	},
 	3 : {
@@ -22,6 +23,7 @@ var data_tanaman = {
 		"darah" : "500",
 		"harga_kartu" : "30",
 		"cooldown_kartu" : "12",
+		"scene" : preload("res://asset/scenes/tanaman/sawit.tscn"),
 		"gambar_kartu" : "res://asset/textures/cards/kartu3.tres"
 	},
 	4 : {
@@ -29,6 +31,7 @@ var data_tanaman = {
 		"darah" : "100",
 		"harga_kartu" : "60",
 		"cooldown_kartu" : "12",
+		"scene" : preload("res://asset/scenes/tanaman/bom_kelapa.tscn"),
 		"gambar_kartu" : "res://asset/textures/cards/kartu4.tres"
 	}
 	
@@ -38,29 +41,7 @@ var data_musuh = {
 	1 : {
 		"nama" : "poci",
 		"darah" : 100,
-		"scene" : preload("res://asset/scenes/poci.tscn"),
+		"scene" : preload("res://asset/scenes/musuh/poci.tscn"),
 		"gambar_kartu" : "res://asset/textures/cards/kartu1.tres"
-	},
-	2 : {
-		"nama" : "bambu runcing",
-		"darah" : "100",
-		"harga_kartu" : "40",
-		"cooldown_kartu" : "12",
-		"gambar_kartu" : "res://asset/textures/cards/kartu2.tres"
-	},
-	3 : {
-		"nama" : "sawit",
-		"darah" : "500",
-		"harga_kartu" : "30",
-		"cooldown_kartu" : "12",
-		"gambar_kartu" : "res://asset/textures/cards/kartu3.tres"
-	},
-	4 : {
-		"nama" : "bom kelapa",
-		"darah" : "100",
-		"harga_kartu" : "60",
-		"cooldown_kartu" : "12",
-		"gambar_kartu" : "res://asset/textures/cards/kartu4.tres"
 	}
-	
-}
+	}

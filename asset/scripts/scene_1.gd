@@ -27,7 +27,7 @@ func spawn_tanamam(koordinat):
 		tanaman_baru.koordinat_saya = koordinat
 	add_child(tanaman_baru)
 	GLOBAL.ubin_yang_terisi.append(koordinat)
-		
+	GLOBAL.kartu = 0
 		
 func _ready() -> void:
 	pass #
